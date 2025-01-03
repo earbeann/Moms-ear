@@ -1,0 +1,173 @@
+<!-- res/layout/activity_settings.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAE5E5"
+    android:padding="16dp">
+
+    <!-- 상단 바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- 이전 버튼 -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:backgroundTint="#D3D3D3"
+            android:layout_weight="1"
+            android:textColor="#111111"
+            android:textStyle="bold"/>
+
+        <!-- 로고 이미지 -->
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#F8E3E3"
+            android:src="@drawable/logo" />
+
+        <!-- 계정 버튼 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:backgroundTint="#D3D3D3"
+            android:layout_weight="1"
+            android:textColor="#111111"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+    <!-- 중앙 기능 버튼들 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#CEAEAE"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 사용자 정보 버튼 -->
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#D3D3D3"
+            android:text="@string/id_information"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- 어플 설정 버튼 -->
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#D3D3D3"
+            android:text="@string/application_setting"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- 회원 탈퇴 버튼 -->
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D3D3D3"
+            android:text="@string/out"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+<!--        텍스트 입력 박스 추가 -->
+<!--        <EditText-->
+<!--            android:id="@+id/inputTextBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="100dp"-->
+<!--            android:layout_marginStart="0dp"-->
+<!--            android:hint="@string/Input"-->
+<!--            android:background="#FFFFFF"-->
+<!--            android:textColor="#111111"-->
+<!--            android:textStyle="bold"-->
+<!--            android:padding="12dp"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:autofillHints="username"-->
+<!--            android:maxLines="5"-->
+<!--            android:scrollbars="vertical"-->
+<!--            android:gravity="top|start"/>-->
+
+<!--        캘린더 추가-->
+<!--        <CalendarView-->
+<!--            android:id="@+id/calendarView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp" />-->
+
+
+    </LinearLayout>
+
+    <!-- 하단 메뉴 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 동화 버튼 -->
+        <Button
+            android:id="@+id/fairyTaleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="320dp"
+            android:text="@string/fairy_tale"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- 홈 버튼 -->
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="320dp"
+            android:text="@string/home"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- 음악 버튼 -->
+        <Button
+            android:id="@+id/musicButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="100dp"
+            android:text="@string/music"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- MY 버튼 -->
+        <Button
+            android:id="@+id/myPageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="100dp"
+            android:text="@string/go_to_the_my_page"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

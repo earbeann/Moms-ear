@@ -1,0 +1,178 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+
+    <!-- Toolbar 영역 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="#FDE8E8"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <!-- 로고 이미지 -->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <!-- 계정 버튼 -->
+        <ImageButton
+            android:id="@+id/btn_account"
+            android:layout_width="33dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/description_account_button"
+            android:src="@drawable/user" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- "오늘의 동화" 텍스트 -->
+    <TextView
+        android:id="@+id/today_fairytale_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/today_fairytale"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <!-- 캘린더 기능 (중앙 위치) 11.16여기서 부터 변경 하면됨 xml전체 가져가는게 더빠름 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="438dp"
+        android:layout_weight="1"
+        android:background="#CEAEAE"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="279dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#FDE8E8"
+            android:selectedWeekBackgroundColor="#009688" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/diaryEntry1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DDDDDD"
+                    android:maxLines="10"
+                    android:overScrollMode="always"
+                    android:padding="16dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </ScrollView>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/Read_fairy_tale_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:backgroundTint="#D3D3D3"
+            android:text="@string/read_fairy_tale"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/create_fairy_tale_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="320dp"
+            android:text="@string/create_fairy_tale"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 하단 메뉴 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 동화 버튼 -->
+        <Button
+            android:id="@+id/fairyTaleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="320dp"
+            android:text="@string/fairy_tale"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- 홈 버튼 -->
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="320dp"
+            android:text="@string/home"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- 음악 버튼 -->
+        <Button
+            android:id="@+id/musicButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="100dp"
+            android:text="@string/music"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+
+        <!-- MY 버튼 -->
+        <Button
+            android:id="@+id/myPageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#D3D3D3"
+            android:maxWidth="100dp"
+            android:text="@string/go_to_the_my_page"
+            android:textColor="#111111"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
